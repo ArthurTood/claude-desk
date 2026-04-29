@@ -1,7 +1,10 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert");
+const fs = require("node:fs");
+const path = require("node:path");
 
 const updateBubble = require("../src/update-bubble");
+const updateBubbleHtml = fs.readFileSync(path.join(__dirname, "..", "src", "update-bubble.html"), "utf8");
 
 describe("update bubble follow-pet positioning", () => {
   it("anchors a short bubble directly below the pet hitbox when there is room", () => {
@@ -100,5 +103,27 @@ describe("update bubble follow-pet positioning", () => {
     });
 
     assert.deepStrictEqual(bounds, { x: 406, y: 8, width: 340, height: 520 });
+  });
+
+  it("caps an overlong bubble to the visible work area so action buttons are not clipped", () => {
+    const bounds = updateBubble.__test.computeUpdateBubbleBounds({
+      bubbleFollowPet: false,
+      width: 340,
+      edgeMargin: 8,
+      gap: 6,
+      height: 1200,
+      reservedHeight: 0,
+      workArea: { x: 0, y: 0, width: 800, height: 600 },
+      petBounds: { x: 300, y: 200, width: 120, height: 120 },
+      hitRect: null,
+    });
+
+    assert.deepStrictEqual(bounds, { x: 452, y: 8, width: 340, height: 584 });
+  });
+
+  it("keeps action buttons visible when update text is long", () => {
+    assert.match(updateBubbleHtml, /\.card \{[\s\S]*height: calc\(100vh - 12px\);[\s\S]*\}/);
+    assert.match(updateBubbleHtml, /\.summary \{[\s\S]*overflow-y: auto;[\s\S]*\}/);
+    assert.match(updateBubbleHtml, /\.actions \{[\s\S]*flex-shrink: 0;[\s\S]*\}/);
   });
 });

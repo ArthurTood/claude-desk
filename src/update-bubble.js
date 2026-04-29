@@ -51,6 +51,9 @@ function computeUpdateBubbleBounds({
   petBounds,
   hitRect,
 }) {
+  const maxHeight = Math.max(80, workArea.height - edgeMargin * 2);
+  height = Math.min(height, maxHeight);
+
   let x = workArea.x + workArea.width - width - edgeMargin;
   let y = workArea.y + workArea.height - edgeMargin - height - reservedHeight;
 

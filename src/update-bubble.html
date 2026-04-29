@@ -83,6 +83,8 @@ body { padding: 6px; }
   transform: translateX(60px);
   transition: opacity 0.35s var(--ease-spring), transform 0.4s var(--ease-spring);
   overflow: hidden;
+  height: calc(100vh - 12px);
+  min-height: 0;
 }
 .card[data-mode="checking"],
 .card[data-mode="available"] {
@@ -140,6 +142,8 @@ body { padding: 6px; }
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-height: 0;
+  overflow-y: auto;
 }
 .card[data-mode="checking"] .summary,
 .card[data-mode="available"] .summary {
@@ -180,6 +184,7 @@ body { padding: 6px; }
 .actions {
   display: flex;
   gap: 8px;
+  flex-shrink: 0;
 }
 .actions:empty {
   display: none;
