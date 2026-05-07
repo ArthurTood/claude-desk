@@ -18,7 +18,7 @@
 
 Clawd lives on your desktop and reacts to what your AI coding agent is doing — in real time. Start a long task, walk away, come back when the crab tells you it's done.
 
-Thinking when you prompt, typing when tools run, juggling subagents, reviewing permissions, celebrating when tasks complete, sleeping when you step away. Ships with two built-in themes: **Clawd** (pixel crab) and **Calico** (三花猫), with full support for custom themes.
+Thinking when you prompt, typing when tools run, juggling subagents, reviewing permissions, celebrating when tasks complete, sleeping when you step away. Ships with three built-in themes: **Clawd** (pixel crab), **Calico** (三花猫), and **Corgi** (柯基), with full support for custom themes.
 
 > Supports Windows 11, macOS, and Ubuntu/Linux. Requires Node.js. Works with **Claude Code**, **Codex CLI**, **Copilot CLI**, **Gemini CLI**, **Cursor Agent**, **Kiro CLI**, and **opencode**.
 
@@ -95,6 +95,14 @@ Thinking when you prompt, typing when tools run, juggling subagents, reviewing p
     <td align="center"><img src="assets/gif/calico-building.gif" width="80"><br><sub>Calico Building</sub></td>
     <td align="center"><img src="assets/gif/calico-juggling.gif" width="80"><br><sub>Calico Juggling</sub></td>
     <td align="center"><img src="assets/gif/calico-conducting.gif" width="80"><br><sub>Calico Conducting</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/gif/corgi-idle.gif" width="80"><br><sub>Corgi Idle</sub></td>
+    <td align="center"><img src="assets/gif/corgi-thinking.gif" width="80"><br><sub>Corgi Thinking</sub></td>
+    <td align="center"><img src="assets/gif/corgi-typing.gif" width="80"><br><sub>Corgi Typing</sub></td>
+    <td align="center"><img src="assets/gif/corgi-building.gif" width="80"><br><sub>Corgi Building</sub></td>
+    <td align="center"><img src="assets/gif/corgi-juggling.gif" width="80"><br><sub>Corgi Juggling</sub></td>
+    <td align="center"><img src="assets/gif/corgi-conducting.gif" width="80"><br><sub>Corgi Conducting</sub></td>
   </tr>
 </table>
 
@@ -216,4 +224,5 @@ Source code is licensed under the [MIT License](LICENSE).
 
 - **Clawd** character is the property of [Anthropic](https://www.anthropic.com). This is an unofficial fan project, not affiliated with or endorsed by Anthropic.
 - **Calico cat (三花猫)** artwork by 鹿鹿 ([@rullerzhou-afk](https://github.com/rullerzhou-afk)). All rights reserved.
+- **Corgi (柯基)** artwork by Arthur ([@ArthurTood](https://github.com/ArthurTood)). All rights reserved.
 - **Third-party contributions**: copyright retained by respective artists.
